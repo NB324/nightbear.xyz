@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NightBear®</title>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/skins/color-red.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/style-switcher.css" />
+  <!-- Favicon -->
+  <body style="background-image: url('images/backgroundnigh.jpg'); background-size: cover; background-position: center;">
+  </body>
+  <link rel="icon" type="image/x-icon" href="images/Nightbear.jpg" />
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+        background: black;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+ 
+    /* 🔥 Darkness Overlay */
+    .dark-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+        transition:  0.3s ease-in-out;
+        z-index: 0; 
+    }
+
+    /* Blood Particle Effect */
+    .blood-particle {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: red;
+        border-radius: 50%;
+        opacity: 1;
+        animation: bloodParticles 0.8s linear forwards;
+    }
+
+    @keyframes bloodParticles {
+        0% {
+            transform: translate(0, 0) scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(var(--dx), var(--dy)) scale(0);
+            opacity: 0;
+        }
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="fire-bg"></div>
+  <div class="dark-overlay"></div>
+  <!-- Main Content Start -->
+  <div class="main-content">
+    <!-- Home Section Start -->
+    <section class="home active section" id="home">
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="row">
+          <div class="home-info padd-15">
+            <h3 class="hello"> 
+              Hello, my name is <span class="name">𝐑à𝟑d</span>
+            </h3>
+            <h3 class="my-profession">
+              I'm a <span class="typing"></span>
+            </h3>
+            <p>🚀 Welcome to NightBear® ⚡
+
+              El Gayar is a powerful execution tool designed for fast, stable, and efficient script execution. With a user-friendly interface and optimized performance, it ensures a smooth and secure experience.
+              
+              🔹 Fast & Reliable
+              🔹 Easy to Use
+              🔹 Safe & Secure
+              
+              💡 Download Now & Execute with Ease! 🚀</p>
+            <a href="https://bit.ly/Nightmare®" class="btn">Join Discord Server</a>
+
+          </div>
+          <div class="home-img padd-15">
+            <img src="images/Nightbear.jpg" alt="hero" />
+          </div>
+        </div>
+      </div>
+      <div class="bear">
+        <div class="eye eye-left"></div>
+        <div class="eye eye-right"></div>
+    </div>    
+    </section>
+    <!-- Home Section End -->
+  </div>
+<body>
+
+  <style>
+    .moving-image {
+      width: 500px; /* Adjust width */
+      height: auto; /* Maintain aspect ratio */
+    }
+  </style>
+  
+  <div class="image-container">
+    <img src="images/image_magicstudio_hqmjyow4nx4.png" alt="Moving Image" class="moving-image">
+  </div>
+  <h1>Come for the <span class="highlight">power.</span> Stay for the fun.</h1>
+  
+  <div class="dropdown">
+    <button class="dropdown-btn" id="dropdownBtn">
+      Switch OS <span class="arrow">▼</span>
+    </button>
+    <div class="dropdown-content" id="dropdownMenu">
+      <a href="#">Windows</a>
+      <a href="#">Android(Soon..)</a>
+      <a href="#">iOS(Soon..)</a>
+    </div>
+  </div>  
+  <script src="js/choose.js"></script>
+<button class="btn" id="downloadBtn">Get Nightbear Now!</button>
+  <script src="js/imagssss.js"></script>
+
+
+    <div class="features">
+        <div class="feature-card red">
+            <h2>Stunning Design</h2>
+            <p>Experience a new way to enjoy gaming with a beautifully crafted UI.</p>
+        </div>
+        <div class="feature-card pink">
+            <h2>Enhanced Performance</h2>
+            <p>Fast and fluid gameplay for a next-level experience.</p>
+        </div>
+        <div class="feature-card blue">
+            <h2>Elite Quality</h2>
+            <p>Top-tier visuals and immersive interactions.</p>
+        </div>
+        <div class="feature-card purple">
+            <h2>100% Security</h2>
+            <p>Play with peace of mind knowing your data is safe.</p>
+        </div>
+    </div>
+
+    <script src="js/animation.js"></script>
+</body>
+  
+  <script>
+    window.addEventListener("scroll", () => {
+      let scrollY = window.scrollY;
+      let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      let darkness = Math.min(scrollY / maxScroll * 1.2, 0.9);
+      document.querySelector(".dark-overlay").style.background = `rgba(0, 0, 0, ${darkness})`;
+    });
+
+    document.addEventListener("click", function(event) {
+        const scrollOffset = window.scrollY;
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement("div");
+            particle.classList.add("blood-particle");
+            document.body.appendChild(particle);
+    
+            const dx = (Math.random() - 0.5) * 200;
+            const dy = (Math.random() - 0.5) * 200;
+            particle.style.setProperty('--dx', `${dx}px`);
+            particle.style.setProperty('--dy', `${dy}px`);
+    
+            particle.style.left = `${event.clientX}px`;
+            particle.style.top = `${event.clientY + scrollOffset}px`;
+    
+            setTimeout(() => {
+                particle.remove();
+            }, 800);
+        }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
