@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Set the file path based on the OS choice
             if (osChoice === "Windows") {
-                selectedFile = "filles/Nightbear New Version.zip";
+                selectedFile = "filles/Nightbear New.zip";
             } else if (osChoice === "Android") {
                 selectedFile = "files/Nightbear-Android.apk";
             } else if (osChoice === "Android (VNG)") {
